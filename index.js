@@ -6,7 +6,7 @@ const server = http.createServer(app);
 
 const { Server } = require("socket.io");
 const io = new Server(server, {
-  cors: ["https://nextchat-psi.vercel.app/"],
+  cors: ["https://nextchat-psi.vercel.app"],
 });
 const PORT = 5000 || process.env.PORT;
 
