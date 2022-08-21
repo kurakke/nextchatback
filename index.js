@@ -6,9 +6,10 @@ const server = http.createServer(app);
 
 const { Server } = require("socket.io");
 const io = new Server(server, {
+  // cors: ["http://localhost:3000"],
   cors: ["https://nextchat-psi.vercel.app"],
 });
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 io.on("connection", (socket) => {
   console.log("yahharo connected");
